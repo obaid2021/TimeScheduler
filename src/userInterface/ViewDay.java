@@ -81,6 +81,7 @@ public class ViewDay extends JFrame implements MouseListener {
 		}
 		try {
 			show = new ShowAppointment();
+			
 			show.show_start_appointment_day(ViewMonth.username, day);
       		show.check_in_the_middle(ViewMonth.username, day);
 			show.check_end_time(ViewMonth.username, day);
@@ -293,6 +294,7 @@ public class ViewDay extends JFrame implements MouseListener {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton.setBounds(784, 291, 156, 33);
 		contentPane.add(btnNewButton);
+		 
 		coloring(lblNewLabel_0, app[0]);
 		coloring(lblNewLabel_1, app[1]);
 		coloring(lblNewLabel_2, app[2]);
@@ -436,9 +438,8 @@ public class ViewDay extends JFrame implements MouseListener {
  * @param priority determines the color of each hour
  */
 	public void coloring(JLabel label, String priority) {
-
-		if (priority.startsWith(" l ")) {
-
+         
+		if (priority.startsWith(" l ")) { 
 			label.setBackground(Color.green);
 			label.setOpaque(true);
 		} else if (priority.startsWith(" h ")) {

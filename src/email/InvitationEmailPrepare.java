@@ -50,6 +50,15 @@ public class InvitationEmailPrepare {
 
 	}
 
+	/**
+	 * This function gets the names and email addresses of the participants who will
+	 * get the email of cancellation.
+	 * 
+	 * @param eventID  id of the event.
+	 * @param username profile that is logged in.
+	 * @throws SQLException       error messages during sql commands execution.
+	 * @throws MessagingException errors during connection with mail server.
+	 */
 	public void event_deleteion_email(int eventID, String username) throws SQLException, MessagingException {
 		Statement stmt;
 		stmt = Welcome.con.createStatement();
@@ -72,6 +81,10 @@ public class InvitationEmailPrepare {
 	}
 
 	/**
+	 * This function prepares an email for the invitation of the event. Information
+	 * regarding the event is fetched from the database.
+	 * <p>
+	 * Use gets the information of the event in the email
 	 * 
 	 * @param email    particpant's email read from database.
 	 * @param name     particiapnt's name read from database.
@@ -119,13 +132,25 @@ public class InvitationEmailPrepare {
 		sendEmail.send_email(email, subject, msg);
 	}
 
+	/**
+	 * This function prepares an email for the cancellation of the event.
+	 * Information regarding the event is fetched from the database.
+	 * <p>
+	 * Use gets the information of the event in the email
+	 * 
+	 * @param email    It is the email address of the participant.
+	 * @param name     Name of the participant.
+	 * @param eventID  event number.
+	 * @param username profile which is logged in.
+	 * @throws SQLException       error messages during sql commands execution.
+	 * @throws MessagingException errors during connection with mail server.
+	 */
 	public void send_email_cancellation(String email, String name, int eventID, String username)
 			throws SQLException, MessagingException {
 		Statement stmt = Welcome.con.createStatement();
 		String subject = "Cancellation to Event";
 		String msg, nameOfEvent = null, enddate = null, startdate = null, startTime = null, endTime = null,
 				location = null, priority = null;
-		String invitationFirstname = null, invitationSecondName = null;
 
 		ResultSet rs = stmt.executeQuery("select * from event_schedule where id='" + eventID + "'");
 		while (rs.next()) {
@@ -137,11 +162,6 @@ public class InvitationEmailPrepare {
 			endTime = rs.getString(7);
 			location = rs.getString(8);
 			priority = rs.getString(9);
-		}
-		rs = stmt.executeQuery("select * from register_user where username='" + username + "'");
-		while (rs.next()) {
-			invitationFirstname = rs.getString(2);
-			invitationSecondName = rs.getString(3);
 		}
 
 		msg = "Dear " + name + "\n The following event has been cancelled." + "\n Name Of Event: " + nameOfEvent

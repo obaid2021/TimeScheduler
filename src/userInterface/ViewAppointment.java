@@ -188,7 +188,7 @@ public class ViewAppointment extends JFrame {
 		lblNewLabel_2_4.setBounds(292, 273, 327, 30);
 		contentPane.add(lblNewLabel_2_4);
 
-		JLabel lblNewLabel_1_4_1 = new JLabel("Ends at");
+		JLabel lblNewLabel_1_4_1 = new JLabel("Attached Files");
 		lblNewLabel_1_4_1.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		lblNewLabel_1_4_1.setBounds(86, 313, 165, 34);
 		contentPane.add(lblNewLabel_1_4_1);

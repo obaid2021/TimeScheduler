@@ -52,7 +52,7 @@ public class ShowAppointment {
 
 	}
 /**
- * This function determines the end time of the appointment.
+ * This function determines the end time of the appointment and marks it in the hourly view.
  * @param username is the profile that is to be checked.
  * @param endDay last day of the appointment.
  * @throws SQLException shows error in connection with database and related to database.
@@ -74,6 +74,7 @@ public class ShowAppointment {
  * @throws SQLException shows error in connection with database and related to database
  */
 	public void check_in_the_middle(String username, String day) throws SQLException {
+	 
 		String date;
 		String mark ;
 		for (int i = 1; i < 31; i++) {
@@ -105,7 +106,7 @@ public class ShowAppointment {
 		String endTime = null, endDate;
 		String title;
 		String priority;
-
+		 
 		for (int i = 0; i < 24; i++) {
 			if (i < 10) {
 
@@ -123,9 +124,10 @@ public class ShowAppointment {
 				start = i;
 				endTime = check.get_end_time_title(ViewMonth.username, title);
 				endDate = check.check_end_appointment_day(day, ViewMonth.username, title);
-
+				 
 				if (endDate.equals(day)) {
 					end = Integer.parseInt(endTime.substring(0, 2));
+					 
 					mark();
 				} else {
 					mark_fromend();
@@ -142,7 +144,7 @@ public class ShowAppointment {
  */
 	public void mark() {
 		for (int j = start + 1; j <= end; j++) {
-
+        
 			ViewDay.app[j] = " " + pr;
 		}
 	}
@@ -151,6 +153,7 @@ public class ShowAppointment {
  * will be needed.<p> The day will be marked until the end.
  */
 	public void mark_fromend() {
+	 
 		for (int j = start + 1; j <= 23; j++) {
 
 			ViewDay.app[j] = " " + pr;
@@ -161,8 +164,10 @@ public class ShowAppointment {
  * will be needed.<p> The day will be marked from the start to that time.
  */
 	public void mark_fromStart() {
+		 
 		for (int j = 0; j <= end; j++) {
 
+		 
 			ViewDay.app[j] = " " + pr;
 		}
 	}
