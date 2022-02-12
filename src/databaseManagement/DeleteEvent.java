@@ -3,7 +3,11 @@ package databaseManagement;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.mail.MessagingException;
+
+import email.InvitationEmailPrepare;
 import start.Welcome;
+import userInterface.BookAppointment;
 /**
  * This class is used to delete the events of a user.
  * @author Muhammad Obaid Ullah , Syed Adil Ehsan , Rao Shahan Naveed
@@ -15,8 +19,11 @@ public class DeleteEvent {
  * This function will deletes the event, its attached files and its participants from the database.
  * @param id is the id number of the event that is to be deleted.
  * @throws SQLException Sql connectivity and command errors will be checked.
+ * @throws MessagingException 
  */
-	public void delete_event(int id) throws SQLException {
+	public void delete_event(int id) throws SQLException, MessagingException {
+		InvitationEmailPrepare cancel = new InvitationEmailPrepare();
+		cancel.event_deleteion_email(id, BookAppointment.username);
 		stmt = Welcome.con.prepareStatement("DELETE from file where event_id = '" + id + "'");
 		stmt.executeUpdate();
 

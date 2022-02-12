@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.Color;
+
+import javax.mail.MessagingException;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -67,7 +69,7 @@ public class Confirm extends JFrame {
 				DeleteEvent del = new DeleteEvent();
 				try {
 					del.delete_event(ViewAppointment.eventID);
-				} catch (SQLException e1) {
+				} catch (SQLException | MessagingException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

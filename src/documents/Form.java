@@ -35,7 +35,7 @@ public class Form extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Makes a frame in app.
+	 * Makes a frame in application.
 	 */
 
 	public void make_form() {
