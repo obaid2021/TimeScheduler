@@ -78,10 +78,10 @@ public class BookAppointment extends JFrame {
 	 * required.
 	 * <p>
 	 * 
-	 * @param username1 profile id that is logged in
-	 * @param dateOrId  It can be either date or ID
+	 * @param username1 profile id that is logged in.
+	 * @param dateOrId  It can be either date or ID.
 	 * @param operation It can be new appointment or edit an existing one.
-	 * @return returns nothing
+	 * @return returns nothing.
 	 */
 	public int user_interface(String username1, String dateOrId, String operation) {
 		Events newEvent = new Events();

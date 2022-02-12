@@ -1,4 +1,5 @@
 package start;
+//latest
 import warnings.Error;
  
 import java.awt.EventQueue;
@@ -69,7 +70,7 @@ public class Welcome extends JFrame {
 	 * This Constructor creates the frame with buttons on it.
 	 */
 	public Welcome() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Win10 Pro x64\\eclipse-workspace\\TimeScheduler\\Resources\\Clock.JPG"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Clock.JPG"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(310, 50, 772, 490);
 		contentPane = new JPanel();

@@ -86,9 +86,11 @@ public class ViewDay extends JFrame implements MouseListener {
 			show.check_end_time(ViewMonth.username, day);
 			dayViewing = day;
 			frame = new ViewDay();
+			frame.setLocationRelativeTo(null);
 			if (!frame.isUndecorated()) {
 				frame.setUndecorated(true);
 			}
+			frame.setLocationRelativeTo(null);
 			frame.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -378,7 +380,7 @@ public class ViewDay extends JFrame implements MouseListener {
 
 		lblNewLabel_24 = new JLabel("");
 		lblNewLabel_24.setIcon(new ImageIcon(
-				"C:\\Users\\Win10 Pro x64\\eclipse-workspace\\TimeScheduler\\Resources\\abstract-white-futuristic-background-connecting-dots-lines-white-background-abstract-white-futuristic-background-white-146584221.jpg"));
+				"abstract-white-futuristic-background-connecting-dots-lines-white-background-abstract-white-futuristic-background-white-146584221.jpg"));
 		lblNewLabel_24.setBounds(0, 0, 1111, 571);
 		contentPane.add(lblNewLabel_24);
 	}

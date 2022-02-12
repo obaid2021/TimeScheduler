@@ -11,11 +11,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/c3p0-0.9.5.2.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/javax.mail.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -31,32 +26,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/log4j-1.2.16.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/mysql-connector-java-8.0.22.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/quartz-2.3.0-SNAPSHOT.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/quartz-jobs-2.3.0-SNAPSHOT.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/slf4j-api-1.7.7.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/slf4j-log4j12-1.7.7.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

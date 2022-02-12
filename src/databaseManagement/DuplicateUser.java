@@ -16,10 +16,10 @@ public class DuplicateUser {
 /**
  * This function goes throw all the entries of user profiles in the database and check if a username or email<p>
  * already exists. If it does , boolean value true will be returned else false will be returned.
- * @param username username of the profile 
- * @param email email of the profile
+ * @param username username of the profile.
+ * @param email email of the profile.
  * @return true if duplicate is found else false.
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public boolean check_duplicate_in_database(String username, String email) throws SQLException {
 		boolean ret = false;

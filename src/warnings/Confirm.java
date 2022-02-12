@@ -24,13 +24,14 @@ import java.awt.event.ActionEvent;
  */
 @SuppressWarnings("serial")
 public class Confirm extends JFrame {
+
 	static Confirm frame;
 	private JPanel contentPane;
 	static String message = "";
 
 	/**
 	 * Creates the frame for the confirmation.
-	 * @return returns the confirmation messages
+	 * @return returns the confirmation messages.
 	 */
 
 	public String get_confirmation() {

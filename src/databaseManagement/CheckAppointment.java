@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 import start.Welcome;
 /**
- * this class reads the booked appointments from the database.it can also read the priorities of the appointments
+ * This class reads the booked appointments from the database.it can also read the priorities of the appointments
  * @author Muhammad Obaid Ullah, Syed Adil Ehsan, Rao Shahan Naveed
  *
  */
@@ -14,11 +14,11 @@ import start.Welcome;
 public class CheckAppointment {
 	String checkDate;
 /**
- * this function checks if an appointment is booked on a particular day for the logged in user
- * @param date date on which the appointment will be checked
- * @param username profile that is logged in
- * @return if the appointment exists it returns true else false
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function checks if an appointment is booked on a particular day for the logged in user.
+ * @param date date on which the appointment will be checked.
+ * @param username profile that is logged in.
+ * @return if the appointment exists it returns true else false.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public boolean check_appointment_of_month(String date, String username) throws SQLException {
 		Statement stmt = Welcome.con.createStatement();
@@ -35,12 +35,12 @@ public class CheckAppointment {
 		return false;
 	}
 /**
- * this function reads the end date from the database for a given event name
- * @param date starting date of the event
- * @param username profile which is logged in
- * @param title title of the event
- * @return returns the end date of the event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function reads the end date from the database for a given event name.
+ * @param date starting date of the event.
+ * @param username profile which is logged in.
+ * @param title title of the event.
+ * @return returns the end date of the event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String check_end_appointment_day(String date, String username, String title) throws SQLException {
 		Statement stmt = Welcome.con.createStatement();
@@ -55,12 +55,12 @@ public class CheckAppointment {
 		return checkDate;
 	}
 /**
- * this function checks if there is any appointment booked on the selected day
- * @param username profile that is logged in
- * @param date start date of the event
- * @param checkDate the date that is to be checked
- * @return returns the priority of the event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function checks if there is any appointment booked on the selected day.
+ * @param username profile that is logged in.
+ * @param date start date of the event.
+ * @param checkDate the date that is to be checked.
+ * @return returns the priority of the event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String check_middle_date(String username, String date, String checkDate) throws SQLException {
 		String priority = "empty";
@@ -96,11 +96,11 @@ public class CheckAppointment {
 		return priority;
 	}
 /**
- * this function returns the end date of the event whose start date is given
- * @param date this is the start date of the event
- * @param username profile which is logged in
- * @return returns the end date of the event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function returns the end date of the event whose start date is given.
+ * @param date this is the start date of the event.
+ * @param username profile which is logged in.
+ * @return returns the end date of the event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String get_end_date(String date, String username) throws SQLException {
 		Statement stmt = Welcome.con.createStatement();
@@ -140,11 +140,11 @@ public class CheckAppointment {
 		return " ";
 	}
 /**
- * this function returns the end time of the event for a title
- * @param username profile which is logged in
- * @param title name of the event
- * @return  returns the ending time of the event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function returns the end time of the event for a title.
+ * @param username profile which is logged in.
+ * @param title name of the event.
+ * @return  returns the ending time of the event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String get_end_time_title(String username, String title) throws SQLException {
 		String endTime = "";
@@ -162,11 +162,11 @@ public class CheckAppointment {
 		return endTime;
 	}
 /**
- * this function returns the end time of the event for the given end date
- * @param username profile that is logged in
- * @param endDate ending date of the event 
- * @return returns the end time of the event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function returns the end time of the event for the given end date.
+ * @param username profile that is logged in.
+ * @param endDate ending date of the event .
+ * @return returns the end time of the event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String get_endtime(String username, String endDate) throws SQLException {
 		String endTime = "";
@@ -180,12 +180,12 @@ public class CheckAppointment {
 		return endTime;
 	}
 /**
- * this function reads the priority of an event from the database for a given end time and end date
- * @param username profile which is logged in
- * @param date end date of an event
- * @param endTime end time of an event
- * @return returns the priority of an event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function reads the priority of an event from the database for a given end time and end date
+ * @param username profile which is logged in.
+ * @param date end date of an event.
+ * @param endTime end time of an event.
+ * @return returns the priority of an event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String get_priority_end(String username, String date, String endTime) throws SQLException {
 		String priority = "white";
@@ -213,12 +213,12 @@ public class CheckAppointment {
 
 	}
 /**
- * this function reads the priority of the event from the database for the start date and start time
- * @param username profile which is logged in
- * @param date start date of the event
- * @param startTime start time of the event
- * @return returns the priority of an event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function reads the priority of the event from the database for the start date and start time.
+ * @param username profile which is logged in.
+ * @param date start date of the event.
+ * @param startTime start time of the event.
+ * @return returns the priority of an event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public String get_priority_start(String username, String date, String startTime) throws SQLException {
 

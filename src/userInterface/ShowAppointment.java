@@ -18,10 +18,10 @@ public class ShowAppointment {
 /**
  * Gets month and year as input.
  * Checks each day of the months and finds the appointment of it.
- * Marks them as booked
- * @param month appointments of this month are to be shown
- * @param year will be used in getting appointments of the needed month of the year
- * @throws SQLException shows error in connection with database and related to database
+ * Marks them as booked.
+ * @param month appointments of this month are to be shown.
+ * @param year will be used in getting appointments of the needed month of the year.
+ * @throws SQLException shows error in connection with database and related to database.
  */
 	public void show_appointment_month(String month, String year) throws SQLException {
 		for (int i = 0; i < 31; i++) {
@@ -53,9 +53,9 @@ public class ShowAppointment {
 	}
 /**
  * This function determines the end time of the appointment.
- * @param username is the profile that is to be checked
- * @param endDay last day of the appointment
- * @throws SQLException shows error in connection with database and related to database
+ * @param username is the profile that is to be checked.
+ * @param endDay last day of the appointment.
+ * @throws SQLException shows error in connection with database and related to database.
  */
 	public void check_end_time(String username, String endDay) throws SQLException {
 		String endTime;
@@ -84,7 +84,7 @@ public class ShowAppointment {
 			}
 			 
 			mark = check.check_middle_date(username, date, day);
-			System.out.print("\n mark "+mark);
+			
 			if (!mark.equals("empty")) {
 				start = -1;
 				pr = mark.substring(0,1) + " ";

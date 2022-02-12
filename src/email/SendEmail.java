@@ -23,11 +23,11 @@ import javax.mail.internet.MimeMessage;
 public class SendEmail {
 	/**
 	 * This functions connects with gmail account of the app sends message to the recipient.
-	 * @param recipient email address of the recipient
-	 * @param subject subject of the email
-	 * @param msg main body of the email that will be sent
+	 * @param recipient email address of the recipient.
+	 * @param subject subject of the email.
+	 * @param msg main body of the email that will be sent.
 	 * @return true if message was sent successfully , false if not.
-	 * @throws MessagingException errors during connection with mail server
+	 * @throws MessagingException errors during connection with mail server.
 	 */
 	public boolean send_email(String recipient , String subject , String msg) throws MessagingException {
 		boolean result = false;
@@ -59,9 +59,9 @@ public class SendEmail {
 	}
 /**
  * 
- * @param session session that was created in send_email() function
- * @param myaccount email account myapplication132@gmail.com of the application
- * @param recepient email address of the email receiver
+ * @param session session that was created in send_email() function.
+ * @param myaccount email account myapplication132@gmail.com of the application.
+ * @param recepient email address of the email receiver.
  * @param Subject is the subject of the email.
  * @param msg Main message in the email.
  * @return returns the message to be sent if successful else null.

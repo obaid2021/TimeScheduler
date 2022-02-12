@@ -24,13 +24,13 @@ public class UserInformation {
 	static Statement stmt1;
 
 	/**
-	 * This function uploads user's data in regitser_user table of the database
-	 * @param usrN     username entered by user
-	 * @param fN       first name of the user
-	 * @param lN       last name of the user
-	 * @param email    email address of the user
-	 * @param password password entered by the user
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * This function uploads user's data in regitser_user table of the database.
+	 * @param usrN     username entered by user.
+	 * @param fN       first name of the user.
+	 * @param lN       last name of the user.
+	 * @param email    email address of the user.
+	 * @param password password entered by the user.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void uploadInfo(String usrN, String fN, String lN, String email, String password) throws SQLException {
 
@@ -46,7 +46,7 @@ public class UserInformation {
 	}
 /**
  * This function can read user's information from the database and put it in the required table in GUI.
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public void downloadInformation() throws SQLException {
 		stmt1 = Welcome.con.createStatement();
@@ -66,7 +66,7 @@ public class UserInformation {
 /**
  * This function finds the profile from database that is to be deleted.
  * @param username profile id of the user that is to be deleted.
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */ 
 	public void deleleProfile(String username) throws SQLException {
 
@@ -83,9 +83,9 @@ public class UserInformation {
 
 	}
 /**
- * This function deletes the events booked on given username 
- * @param username user's profile id that is to be deleted
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function deletes the events booked on given username.
+ * @param username user's profile id that is to be deleted.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public void delete_from_events(String username) throws SQLException {
 		stmt = Welcome.con.prepareStatement("DELETE from event_schedule where username=(?)");
@@ -93,9 +93,9 @@ public class UserInformation {
 		stmt.executeUpdate();
 	}
 	/**
-	 * This function deletes the user data of given username 
-	 * @param username user's profile id that is to be deleted
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * This function deletes the user data of given username. 
+	 * @param username user's profile id that is to be deleted.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void delete_from_users(String username) throws SQLException {
 		stmt = Welcome.con.prepareStatement("DELETE from register_user where username=(?)");
@@ -103,9 +103,9 @@ public class UserInformation {
 		stmt.executeUpdate();
 	}
 	/**
-	 * This function deletes the files uploaded on all events of given id 
-	 * @param id event id 
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * This function deletes the files uploaded on all events of given id.
+	 * @param id event id.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void delete_from_file(int id) throws SQLException {
 		stmt = Welcome.con.prepareStatement("DELETE from file where event_id=(?)");
@@ -113,9 +113,9 @@ public class UserInformation {
 		stmt.executeUpdate();
 	}
 	/**
-	 * This function deletes all participants added on given id 
-	 * @param id event id
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * This function deletes all participants added on given id.
+	 * @param id event id.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void delete_from_participants(int id) throws SQLException {
 		stmt = Welcome.con.prepareStatement("DELETE from participants where event_schedule_id=(?)");
@@ -123,13 +123,13 @@ public class UserInformation {
 		stmt.executeUpdate();
 	}
 /**
- * This function updates an already existing profile
- * @param username Profile's username
- * @param firstname Profile's first name
- * @param lastname Profile's first name
- * @param email Profile's email
- * @param password Profile's password
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function updates an already existing profile.
+ * @param username Profile's username.
+ * @param firstname Profile's first name.
+ * @param lastname Profile's first name.
+ * @param email Profile's email.
+ * @param password Profile's password.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */ 
 	public void update_info(String username, String firstname, String lastname, String email, String password)
 			throws SQLException {

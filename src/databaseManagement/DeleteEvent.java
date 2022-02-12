@@ -14,7 +14,7 @@ public class DeleteEvent {
 /**
  * This function will deletes the event, its attached files and its participants from the database.
  * @param id is the id number of the event that is to be deleted.
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public void delete_event(int id) throws SQLException {
 		stmt = Welcome.con.prepareStatement("DELETE from file where event_id = '" + id + "'");
@@ -28,7 +28,7 @@ public class DeleteEvent {
 	}
 	/**
 	 * This function will delete all the entries in the table of events in the database which are empty.
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void delete_empty_events() throws SQLException
 	{

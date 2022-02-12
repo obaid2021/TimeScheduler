@@ -83,6 +83,7 @@ public class ViewMonth extends JFrame implements MouseListener {
 			if (!frame.isUndecorated()) {
 				frame.setUndecorated(true);
 			}
+			frame.setLocationRelativeTo(null);
 			frame.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -66,7 +66,7 @@ public class ViewAppointment extends JFrame {
 	/**
 	 * Creates a frame that shows the information of an appointment.
 	 * 
-	 * @throws SQLException shows error in connection with database and related to database
+	 * @throws SQLException shows error in connection with database and related to database.
 	 */
 	public ViewAppointment() throws SQLException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -222,7 +222,7 @@ public class ViewAppointment extends JFrame {
 /**
  * This function fetches the list of the appointments from database.
  * @param eventIDs id of the event, of which the participants list is needed.
- * @throws SQLException shows error in connection with database and related to database
+ * @throws SQLException shows error in connection with database and related to database.
  */
 	void read_participants(int eventIDs) throws SQLException {
 		DefaultTableModel tableModel = (DefaultTableModel) table.getModel();

@@ -6,9 +6,9 @@ package utilities;
  */
 public class StringIntTime {
 /**
- * this function converts the string value of day into integer value
- * @param dateString string value of date
- * @return integer value of date
+ * This function converts the string value of day into integer value.
+ * @param dateString string value of date.
+ * @return integer value of date.
  */
 	public int get_day_int(String dateString) {
 		int date = 0;
@@ -22,9 +22,9 @@ public class StringIntTime {
 		return date;
 	}
 	/**
-	 * this function converts the string value of month into integer value
-	 * @param monthString string value of month
-	 * @return integer value of month
+	 * This function converts the string value of month into integer value.
+	 * @param monthString string value of month.
+	 * @return integer value of month.
 	 */
 	public int get_month_int(String monthString) {
 		int month = 0;
@@ -35,9 +35,9 @@ public class StringIntTime {
 		return month;
 	}
 	/**
-	 * this function converts the string value of year into integer value
-	 * @param yearString string value of year
-	 * @return integer value of year
+	 * This function converts the string value of year into integer value.
+	 * @param yearString string value of year.
+	 * @return integer value of year.
 	 */
 	public int get_year_int(String yearString) {
 		int year = 0;

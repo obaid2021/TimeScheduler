@@ -25,11 +25,11 @@ public class FileManagement {
 	PreparedStatement pstmt;
 /**
  * This function write a file in the database. 
- * @param file File that will be uploaded in database
- * @param eventID id of the event to which the file is attached
- * @param fileName name of the file 
- * @throws SQLException Sql connectivity and command errors will be checked
- * @throws FileNotFoundException errors in file reading etc
+ * @param file File that will be uploaded in database.
+ * @param eventID id of the event to which the file is attached.
+ * @param fileName name of the file.
+ * @throws SQLException Sql connectivity and command errors will be checked.
+ * @throws FileNotFoundException errors in file reading etc.
  */
 	public void upload_file_in_database(File file, int eventID, String fileName)
 			throws SQLException, FileNotFoundException {
@@ -44,10 +44,10 @@ public class FileManagement {
 		pstmt.executeUpdate();
 	}
 /**
- * This function reads the last file id 
- * @param eventID id of the event to which the file is attached
- * @return returns the last file id
- * @throws SQLException Sql connectivity and command errors will be checked
+ * This function reads the last file id.
+ * @param eventID id of the event to which the file is attached.
+ * @return returns the last file id.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public int read_previous_file_id(int eventID) throws SQLException {
 		int number = 0;
@@ -65,8 +65,8 @@ public class FileManagement {
  * This function reads the file from the database.
  * @param filename Name of the file that is to be read.
  * @param eventID id of the event to which the file is attached.
- * @throws SQLException Sql connectivity and command errors will be checked
- * @throws IOException Input Output file exceptions
+ * @throws SQLException Sql connectivity and command errors will be checked.
+ * @throws IOException Input Output file exceptions.
  */
 	public void read_file_database(String filename, int eventID) throws SQLException, IOException {
 		stmt = Welcome.con.createStatement();

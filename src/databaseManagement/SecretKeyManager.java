@@ -8,7 +8,7 @@ import java.sql.Statement;
 import start.Welcome;
 
 /**
- * This class can upload and download the secret key of each profile to database
+ * This class can upload and download the secret key of each profile to database.
  * 
  * @author Muhammad Obaid Ullah , Syed Adil Ehsan , Rao Shahan Naveed
  *
@@ -17,9 +17,9 @@ public class SecretKeyManager {
 	/**
 	 * This function uploads the secret key to the database.
 	 * 
-	 * @param key      the two digit number used as secret key.
-	 * @param username profile's username , to which the secret key belongs
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * @param key      The two digit number used as secret key.
+	 * @param username Profile's username , to which the secret key belongs.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void upload_secretkey(int key, String username) throws SQLException {
 
@@ -32,8 +32,8 @@ public class SecretKeyManager {
 	/**
 	 * 
 	 * @param username profile's username , to which the secret key belongs.
-	 * @return returns the two digit secret key
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * @return returns the two digit secret key.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public int download_secretkey(String username) throws SQLException {
 		Statement stmt = Welcome.con.createStatement();

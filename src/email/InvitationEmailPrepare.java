@@ -19,8 +19,8 @@ public class InvitationEmailPrepare {
 	 * Each participant will get an email.
 	 * @param eventID eventId of the event, of which an invitation will be sent.
 	 * @param username profile id of the user that is logged in.
-	 * @throws SQLException error message during sql commands execution
-	 * @throws MessagingException errors during connection with mail server
+	 * @throws SQLException error message during sql commands execution.
+	 * @throws MessagingException errors during connection with mail server.
 	 */
 
 	public void event_creation_email(int eventID , String username) throws SQLException, MessagingException {
@@ -47,10 +47,10 @@ public class InvitationEmailPrepare {
  * 
  * @param email particpant's email read from database.
  * @param name particiapnt's name read from database.
- * @param eventID event id of the event
+ * @param eventID event id of the event.
  * @param username Profile of the user who is logged in.
- * @throws SQLException error messages during sql commands execution
- * @throws MessagingException errors during connection with mail server
+ * @throws SQLException error messages during sql commands execution.
+ * @throws MessagingException errors during connection with mail server.
  */
 	public void send_email_invitation(String email, String name, int eventID , String username) throws SQLException, MessagingException {
 		Statement stmt =  Welcome.con.createStatement();

@@ -13,8 +13,8 @@ import warnings.Error;
 public class EmailValidity {
 	 /**
 	  * This function uses javax.mail.jar to check the validity of email address. 
-	  * @param email string value that will be checked
-	  * @return returns true if email is valid else false
+	  * @param email string value that will be checked.
+	  * @return returns true if email is valid else false.
 	  */
 	public boolean isValidEmailAddress(String email) {
 		   boolean result = true;

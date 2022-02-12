@@ -47,8 +47,8 @@ public class ManageParticipant extends JFrame implements MouseListener{
 
 	/**
 	 * Creates a frame.
-	 * @param ID is event's id 
-	 * @throws SQLException shows error in connection with database and related to database
+	 * @param ID is event's id. 
+	 * @throws SQLException shows error in connection with database and related to database.
 	 */
 	public void participant_manage(int ID) throws SQLException {
 		eventID = ID;

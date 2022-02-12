@@ -20,8 +20,11 @@ import start.Welcome;
 public class PrintWeek {
 	/**
 	 * This function opens a dialog to take a path from user , where the file will
-	 * be stored.<p>
-	 * It will read the appointments of the selected week and write them into the file one by one.
+	 * be stored.
+	 * <p>
+	 * It will read the appointments of the selected week and write them into the
+	 * file one by one.
+	 * 
 	 * @param username  profile that is logged in currently.
 	 * @param startDate Date on the start of the week.
 	 * @param endDate   Date on the end of the week.

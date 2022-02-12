@@ -52,7 +52,7 @@ public class Login extends JFrame {
 	 * Creates the login with text fields to get username and password with login button.
 	 */
 	public Login() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Win10 Pro x64\\eclipse-workspace\\TimeScheduler\\Resources\\Clock.JPG"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Clock.JPG"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(310, 50, 705, 558);
 		contentPane = new JPanel();
@@ -138,7 +138,7 @@ public class Login extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Win10 Pro x64\\eclipse-workspace\\TimeScheduler\\Resources\\abstract-white-futuristic-background-connecting-dots-lines-white-background-abstract-white-futuristic-background-white-146584221.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("abstract-white-futuristic-background-connecting-dots-lines-white-background-abstract-white-futuristic-background-white-146584221.jpg"));
 		lblNewLabel_1.setBounds(0, 0, 852, 606);
 		contentPane.add(lblNewLabel_1);
 	}

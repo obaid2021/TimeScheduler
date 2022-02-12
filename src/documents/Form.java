@@ -10,7 +10,6 @@ import email.InvitationEmailPrepare;
 import userInterface.BookAppointment; 
 import userInterface.ViewDay;
 import userInterface.ViewMonth;
-import utilities.StringIntTime;
 
 import java.awt.SystemColor;
 import javax.swing.JLabel;

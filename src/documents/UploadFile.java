@@ -18,7 +18,8 @@ public class UploadFile {
 	/**
 	 * It opens a dialog box, user can select the file path.
 	 * File from that path will be loaded and later uploaded.
-	 * @param eventID id of the event in which we are going to upload the file
+	 * @param eventID id of the event in which we are going to upload the file.
+	 * 
 	 */
 	public void upload_file(int eventID)  {
 		JFileChooser chooseFile = new JFileChooser();

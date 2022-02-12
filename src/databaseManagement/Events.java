@@ -16,8 +16,8 @@ public class Events {
 	Statement stmt;
 /**
  * This function returns the event number of the previously added event.
- * @return last added event's id
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @return last added event's id.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public int get_event_number() throws SQLException {
 		stmt = Welcome.con.createStatement();
@@ -33,8 +33,8 @@ public class Events {
 /**
  * This function will create an event in the database.
  * @param username Profile's username for which an event will be created.
- * @param eventNumber event's ID
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @param eventNumber event's ID.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public void create_event(String username, int eventNumber) throws SQLException {
 
@@ -78,11 +78,11 @@ public class Events {
 /**
  * This function reads the detail of an event from the database and stores it in the variables.
  * 
- * @param username profile id of the user
- * @param date date of the event
- * @param time time of the event
- * @return returns the id of the event
- * @throws SQLException Sql connectivity and command errors will be checked
+ * @param username profile id of the user.
+ * @param date date of the event.
+ * @param time time of the event.
+ * @return returns the id of the event.
+ * @throws SQLException Sql connectivity and command errors will be checked.
  */
 	public int get_event_details(String username, String date, String time) throws SQLException {
 		stmt = Welcome.con.createStatement();
@@ -185,9 +185,9 @@ public class Events {
 	}
 	
 	/**
-	 * this function reads the events details of the given event id
-	 * @param eventID id of an event
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * This function reads the events details of the given event id.
+	 * @param eventID id of an event.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	
 	public void event_details(int eventID) throws SQLException

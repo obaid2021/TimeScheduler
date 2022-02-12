@@ -249,7 +249,7 @@ public class RegisterUser extends JFrame {
 
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon(
-				"C:\\Users\\Win10 Pro x64\\eclipse-workspace\\TimeScheduler\\Resources\\abstract-white-futuristic-background-connecting-dots-lines-white-background-abstract-white-futuristic-background-white-146584221.jpg"));
+				"abstract-white-futuristic-background-connecting-dots-lines-white-background-abstract-white-futuristic-background-white-146584221.jpg"));
 		lblNewLabel_2.setBounds(0, 0, 816, 588);
 		getContentPane().add(lblNewLabel_2);
 		setBackground(Color.GRAY);

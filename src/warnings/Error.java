@@ -14,7 +14,7 @@ import javax.swing.UIManager;
  */
 public class Error {
 	/**
-	 * this function creates an error message window on the screen.
+	 * This function creates an error message window on the screen.
 	 * 
 	 * @param error message that will be displayed on the screen.
 	 */
@@ -28,7 +28,7 @@ public class Error {
 	}
 
 	/**
-	 * this function creates an error warning window on the screen.
+	 * This function creates an error warning window on the screen.
 	 * 
 	 * @param error warning that will be displayed on the screen.
 	 */

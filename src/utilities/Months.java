@@ -1,17 +1,17 @@
 package utilities;
 
 /**
- * this class converts name of month to number of month and vice versa.
+ * This class converts name of month to number of month and vice versa.
  * 
  * @author Muhammad Obaid Ullah, Syed Adil Ehsan, Rao Shahan Naveed
  *
  */
 public class Months {
 	/**
-	 * this function will convert the number of month into name of month
+	 * This function will convert the number of month into name of month.
 	 * 
-	 * @param numberOfMonth integer value of the month
-	 * @return returns the first three characters of the name of the month
+	 * @param numberOfMonth integer value of the month.
+	 * @return returns the first three characters of the name of the month.
 	 */
 	public String get_month_name(int numberOfMonth) {
 		if (numberOfMonth == 1) {
@@ -55,10 +55,10 @@ public class Months {
 	}
 
 	/**
-	 * this function will convert the name of month into number of month
+	 * This function will convert the name of month into number of month.
 	 * 
-	 * @param month string value of the month
-	 * @return returns the integer value of the month
+	 * @param month string value of the month.
+	 * @return returns the integer value of the month.
 	 */
 	public int get_month_number(String month) {
 		if (month.equals("Jan")) {

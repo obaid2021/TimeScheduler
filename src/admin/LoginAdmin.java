@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 /**
- * this class shows a frame for the administrator to login.
+ * This class shows a frame for the administrator to login.
  * @author Muhammad Obaid Ullah, Syed Adil Ehsan, Rao Shahan Naveed
  *
  */
@@ -26,7 +26,7 @@ public class LoginAdmin extends JFrame {
 	static private LoginAdmin frame;
 
 	/**
-	 *creates a frame 
+	 *Creates a frame for admin to login. 
 	 */
 	public void admin_login() {
 
@@ -41,7 +41,7 @@ public class LoginAdmin extends JFrame {
 	}
 
 	/**
-	 *a window will be created for the admin to log in.
+	 *A window will be created for the admin to log in.
 	 */
 	public LoginAdmin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

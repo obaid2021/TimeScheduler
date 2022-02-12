@@ -19,9 +19,9 @@ public class FindProfile {
 	/**
 	 * This functions finds the entered username in the database.If a username is matched,
 	 * it will further check if the password matches with the entered string.
-	 * @param username entered username in login window
-	 * @param password entered password in login window
-	 * @throws SQLException Sql connectivity and command errors will be checked
+	 * @param username entered username in login window.
+	 * @param password entered password in login window.
+	 * @throws SQLException Sql connectivity and command errors will be checked.
 	 */
 	public void profileExists(String username, String password) throws SQLException {
 		Statement stmt2 = Welcome.con.createStatement();
