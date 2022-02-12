@@ -30,10 +30,9 @@ public class SecretKeyManager {
 	}
 
 	/**
-	 * This function downloads the secret key to the database.
 	 * 
-	 * @param key      the two digit number used as secret key.
 	 * @param username profile's username , to which the secret key belongs.
+	 * @return returns the two digit secret key
 	 * @throws SQLException Sql connectivity and command errors will be checked
 	 */
 	public int download_secretkey(String username) throws SQLException {

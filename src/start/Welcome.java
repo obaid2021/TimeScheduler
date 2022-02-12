@@ -37,6 +37,7 @@ public class Welcome extends JFrame {
 	 * Main method connects mysql with eclipse IDE using the driver.<p>
 	 * Deletes any empty events in the event_schedule table of the Database. Creates main frame.<p>
 	 * Launches the application.
+	 * @param args command line arguments
 	 */
 	public static void main(String[] args) {
 		   try {

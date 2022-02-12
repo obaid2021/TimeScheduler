@@ -30,6 +30,7 @@ public class Confirm extends JFrame {
 
 	/**
 	 * Creates the frame for the confirmation.
+	 * @return returns the confirmation messages
 	 */
 
 	public String get_confirmation() {

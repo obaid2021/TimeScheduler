@@ -58,7 +58,7 @@ public class Participants extends ManageParticipant {
  * @param event_schedule_id event id to which the participant is added
  * @param name name of the participant
  * @param email email address of the participant
- * @throws SQLException
+ * @throws SQLException Sql connectivity and command errors will be checked
  */
 	public void add_participant(int id, int event_schedule_id, String name, String email) throws SQLException {
 		PreparedStatement stmt = Welcome.con.prepareStatement("INSERT INTO participants VALUES (?,?,?,? )");

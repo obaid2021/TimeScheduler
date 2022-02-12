@@ -23,7 +23,7 @@ import javax.mail.internet.MimeMessage;
 public class SendEmail {
 	/**
 	 * This functions connects with gmail account of the app sends message to the recipient.
-	 * @param recepient email address of the recipient
+	 * @param recipient email address of the recipient
 	 * @param subject subject of the email
 	 * @param msg main body of the email that will be sent
 	 * @return true if message was sent successfully , false if not.
