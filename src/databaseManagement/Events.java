@@ -7,6 +7,8 @@ import java.sql.Statement;
 import start.Welcome;
 import userInterface.BookAppointment;
 import userInterface.ViewAppointment;
+import utilities.Months;
+import utilities.StringIntTime;
 
 /**
  * This class handles the events interaction with the database.It can read and
@@ -98,47 +100,67 @@ public class Events {
 	public int get_event_details(String username, String date, String time) throws SQLException {
 		stmt = Welcome.con.createStatement();
 		String day = date;
-      	if (date.substring(5, 6).equals(",")) {
-			date = date.substring(4, 5);
-		} else {
-
-			date = date.substring(4, 6);
-		}
-		int id = -1, stTime = -1, eTime = -1, check =  Integer.parseInt(time.substring(0, 2));
+		StringIntTime change = new StringIntTime();
+		date = change.get_date(date);
+	 
+		int id = -1, stTime = -1, eTime = -1, check = Integer.parseInt(time.substring(0, 2));
 		int stDay = 0, eDay = 0, cDay = Integer.parseInt(date);
 		String startD = "", endD = "", startTime = null, endTime = null, startday = null, endday = null,
-				location = null, name = "Not booked"  , month1 = null , month2 = null;
+				location = null, name = "Not booked", year = null, year1 = null, year2 = null;
 		String startT = null, endT = null;
 		ResultSet rs = stmt.executeQuery("select * from event_schedule " + "where username = '" + username + "'");
- 
+		year = change.get_year(day);
+		int i = 0;
 		while (rs.next()) {
 			startTime = rs.getString("start_time");
 			endTime = rs.getString("end_time");
 			startday = rs.getString("start_date");
 			endday = rs.getString("end_date");
-			if (startday.substring(5, 6).equals(",")) {
-				startday = startday.substring(4, 5);
+			year1 = change.get_year(startday);
+			year2 = change.get_year(endday);
+			i++;
+			if (year.equals(year1) || year.equals(year2)) {
+				if (day.substring(0, 3).equals(startday.substring(0, 3))
+						|| day.substring(0, 3).equals(endday.substring(0, 3))) {
+                    startday = change.get_date(startday);
+				 
+					stDay = Integer.parseInt(startday);
+					
+					endday = change.get_date(endday);
+				 
 
-			} else {
-				startday = startday.substring(4, 6);
-			}
-			stDay = Integer.parseInt(startday);
-			if (endday.substring(5, 6).equals(",")) {
-				endday = endday.substring(4, 5);
-			} else {
+					eDay = Integer.parseInt(endday);
+					stTime = Integer.parseInt(startTime.substring(0, 2));
+					eTime = Integer.parseInt(endTime.substring(0, 2));
+					check = Integer.parseInt(time.substring(0, 2));
 
-				endday = endday.substring(4, 6);
-			}
+					if (stDay == cDay) {
+						
+						if (stDay == eDay) {
+							
+							if (check > stTime && eTime > check) {
+							 	id = rs.getInt("id");
+								name = rs.getString("name_of_event");
+								startT = rs.getString("start_time");
+								endT = rs.getString("end_time");
+								startD = rs.getString("start_date");
+								location = rs.getString("location");
+							}
+						} else {
+							if (check >= stTime) {
+						 		id = rs.getInt("id");
+								name = rs.getString("name_of_event");
+								startT = rs.getString("start_time");
+								endT = rs.getString("end_time");
+								startD = rs.getString("start_date");
+								location = rs.getString("location");
+							}
+						}
 
-			eDay = Integer.parseInt(endday);
-			stTime = Integer.parseInt(startTime.substring(0, 2));
-			eTime = Integer.parseInt(endTime.substring(0, 2));
-			check = Integer.parseInt(time.substring(0, 2));
-	 
-			if (stDay == cDay) {
-				if (stDay == eDay) {
-					if (check > stTime && eTime > check) {
-			 
+					}
+
+					if (cDay < eDay && cDay > stDay) {
+					 
 						id = rs.getInt("id");
 						name = rs.getString("name_of_event");
 						startT = rs.getString("start_time");
@@ -146,39 +168,21 @@ public class Events {
 						startD = rs.getString("start_date");
 						location = rs.getString("location");
 					}
-				} else {
-					if (check >= stTime) { 
-						id = rs.getInt("id");
-						name = rs.getString("name_of_event");
-						startT = rs.getString("start_time");
-						endT = rs.getString("end_time");
-						startD = rs.getString("start_date");
-						location = rs.getString("location");
+					if (cDay == eDay) {
+					 
+						if (eTime >= check) {
+							 
+							id = rs.getInt("id");
+							name = rs.getString("name_of_event");
+							startT = rs.getString("start_time");
+							endT = rs.getString("end_time");
+							startD = rs.getString("start_date");
+							location = rs.getString("location");
+						}
 					}
-				}
 
-			}
-			if (cDay < eDay && cDay > stDay) {
-		 
-				id = rs.getInt("id");
-				name = rs.getString("name_of_event");
-				startT = rs.getString("start_time");
-				endT = rs.getString("end_time");
-				startD = rs.getString("start_date");
-				location = rs.getString("location");
-			}
-			if (cDay == eDay) {
-				if (eTime >= check && check >= stTime) {
-			 
-					id = rs.getInt("id");
-					name = rs.getString("name_of_event");
-					startT = rs.getString("start_time");
-					endT = rs.getString("end_time");
-					startD = rs.getString("start_date");
-					location = rs.getString("location");
 				}
 			}
-
 		}
 
 		ViewAppointment.nameOfEvent = name;

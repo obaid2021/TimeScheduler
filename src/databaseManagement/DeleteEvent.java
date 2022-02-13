@@ -19,7 +19,7 @@ public class DeleteEvent {
  * This function will deletes the event, its attached files and its participants from the database.
  * @param id is the id number of the event that is to be deleted.
  * @throws SQLException Sql connectivity and command errors will be checked.
- * @throws MessagingException 
+ * @throws MessagingException  errors during connection with mail server.
  */
 	public void delete_event(int id) throws SQLException, MessagingException {
 		InvitationEmailPrepare cancel = new InvitationEmailPrepare();
