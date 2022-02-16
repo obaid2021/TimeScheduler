@@ -1,12 +1,16 @@
 package email;
 
+ 
 
-import java.util.Calendar;
-import java.util.Timer;
-import java.util.TimerTask;
-
-public class Reminder {
+public class Reminder extends Thread {
+public void run() {
+	while(true)
+	{
+		
+	}
+}
 	
+	/*	
 	public static void schedule_email_reminder() {
 		 
 		Timer timer = new Timer();
@@ -32,5 +36,5 @@ public class Reminder {
 		//timer.scheduleAtFixedRate(task, 0, 1000);
 		timer.scheduleAtFixedRate(task, date.getTime(), 1000);
 	}
-
+*/
 }

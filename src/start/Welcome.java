@@ -21,6 +21,7 @@ import java.awt.Toolkit;
 import java.awt.SystemColor;
 import admin.LoginAdmin;
 import databaseManagement.DeleteEvent;
+import databaseManagement.ReminderEmails;
  
 /**
  * This class shows the first window of the program with register, login and admin buttons.
@@ -41,11 +42,15 @@ public class Welcome extends JFrame {
 	 * @param args command line arguments
 	 */
 	public static void main(String[] args) {
+		 
 		   try {
 	            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/timeschedule?serverTimezone=Europe/Helsinki", "root", "Welcome@123");
 	            System.out.print("Connection Succesful");
 	            DeleteEvent delete = new DeleteEvent();
 	            delete.delete_empty_events();
+	            ReminderEmails reminder = new ReminderEmails();
+	    		reminder.start();
+	           
 		   } catch (SQLException e) {
 	            Error error= new Error();
 				error.errorWarning("Connection with database was unsuccessful");

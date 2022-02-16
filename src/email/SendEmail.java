@@ -33,6 +33,7 @@ public class SendEmail {
 		boolean result = false;
 		EmailValidity check = new EmailValidity();
 		boolean valid =check.isValidEmailAddress(recipient);
+		System.out.print("\n "+subject+" "+msg + " "+recipient);
 		if(valid == true)
 		{
 			result = true;

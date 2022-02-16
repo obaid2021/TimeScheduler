@@ -327,7 +327,7 @@ public class BookAppointment extends JFrame {
 		lblSetReminder.setBounds(106, 511, 165, 37);
 		contentPane.add(lblSetReminder);
 
-		String[] reminder = { "none", "1 week", "3 days", "1 hour", "10 minutes" };
+		String[] reminder = { "1 minute", "1 week", "3 days", "1 hour", "10 minutes" };
 		JComboBox<Object> comboBox_1 = new JComboBox<Object>(reminder);
 		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		comboBox_1.setBounds(280, 514, 158, 34);

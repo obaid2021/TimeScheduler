@@ -6,27 +6,27 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/activation-1.1.1.jar">
+	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/Libraries/activation-1.1.1.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/javax.mail.jar">
+	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/Libraries/javax.mail.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/jcalendar-1.4.jar">
+	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/Libraries/jcalendar-1.4.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/JPlanner.jar">
+	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/Libraries/JPlanner.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/TimeScheduler/Libraries/mysql-connector-java-8.0.22.jar">
+	<classpathentry kind="lib" path="C:/Users/Win10 Pro x64/eclipse-workspace/Libraries/mysql-connector-java-8.0.22.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

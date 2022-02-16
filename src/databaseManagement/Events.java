@@ -7,7 +7,6 @@ import java.sql.Statement;
 import start.Welcome;
 import userInterface.BookAppointment;
 import userInterface.ViewAppointment;
-import utilities.Months;
 import utilities.StringIntTime;
 
 /**
@@ -68,7 +67,7 @@ public class Events {
 	 * 
 	 * @throws SQLException Sql connectivity and command errors will be checked
 	 */
-	public void update_event() throws SQLException {
+	public void update_event()  throws SQLException {
 
 		PreparedStatement stmt = Welcome.con.prepareStatement("UPDATE event_schedule SET username= (?),"
 				+ " name_of_event = (?), start_date= (?)," + " end_date = (?), start_time = (?), end_time =(?), "
@@ -82,7 +81,7 @@ public class Events {
 		stmt.setString(6, BookAppointment.endTime);
 		stmt.setString(7, BookAppointment.locationOfEvent);
 		stmt.setString(8, BookAppointment.priority);
-		stmt.setString(9, BookAppointment.reminder);
+		stmt.setString(9, BookAppointment.reminder_1);
 		stmt.setInt(10, BookAppointment.eventID);
 		stmt.execute();
 	}
@@ -105,12 +104,12 @@ public class Events {
 	 
 		int id = -1, stTime = -1, eTime = -1, check = Integer.parseInt(time.substring(0, 2));
 		int stDay = 0, eDay = 0, cDay = Integer.parseInt(date);
-		String startD = "", endD = "", startTime = null, endTime = null, startday = null, endday = null,
+		String startD = "",   startTime = null, endTime = null, startday = null, endday = null,
 				location = null, name = "Not booked", year = null, year1 = null, year2 = null;
 		String startT = null, endT = null;
 		ResultSet rs = stmt.executeQuery("select * from event_schedule " + "where username = '" + username + "'");
 		year = change.get_year(day);
-		int i = 0;
+		 
 		while (rs.next()) {
 			startTime = rs.getString("start_time");
 			endTime = rs.getString("end_time");
@@ -118,7 +117,7 @@ public class Events {
 			endday = rs.getString("end_date");
 			year1 = change.get_year(startday);
 			year2 = change.get_year(endday);
-			i++;
+	 
 			if (year.equals(year1) || year.equals(year2)) {
 				if (day.substring(0, 3).equals(startday.substring(0, 3))
 						|| day.substring(0, 3).equals(endday.substring(0, 3))) {
